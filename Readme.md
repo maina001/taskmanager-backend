@@ -201,4 +201,4 @@ DELETE /api/v1/tasks/:id: Delete an existing task
 bash
 Copy code
 curl -X DELETE http://localhost:4567/api/v1/tasks/1
-I hope this helps you get started with building your task manager app backend using Sinatra!
+I hope this helps you get started with building your task manager app backend using Sinatra! 
