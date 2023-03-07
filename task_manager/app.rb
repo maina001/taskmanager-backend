@@ -33,5 +33,12 @@ put '/api/v1/tasks/:id' do
   end
 end
 
-# delete an existing task
+delete an existing task
 delete '/api/v1/tasks/:id' do
+  task = Task.find(params[:id])
+  if task.destroy
+    { message: 'Task deleted successfully' }.to_json
+  else
+    halt 422, task.errors.to_json
+  end
+end
